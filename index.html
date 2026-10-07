@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kale Kadife | قلعة المخمل</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #12372A;
+      --accent: #C5A880;
+      --accent-hover: #b09166;
+      --bg: #FBFBF9;
+      --surface: #FFFFFF;
+      --text: #1F2421;
+      --text-muted: #5C6560;
+      --border: #E5E7EB;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 50;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: 0.5px;
+    }
+    .lang-switcher select {
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .hero {
+      text-align: center;
+      padding: 5rem 1.5rem;
+      background: radial-gradient(circle at top, #e8edea 0%, var(--bg) 70%);
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 2rem;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.8rem;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      border-radius: var(--radius);
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #0c241c; }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-title h2 {
+      font-size: 2rem;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .card h3 {
+      color: var(--primary);
+      margin-bottom: 0.8rem;
+      font-size: 1.25rem;
+    }
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    footer {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      margin-top: 3rem;
+    }
+    footer p { opacity: 0.8; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo">KALE KADİFE</a>
+    <div class="lang-switcher">
+      <select id="langSelect" onchange="changeLanguage(this.value)">
+        <option value="ar">العربية</option>
+        <option value="tr">Türkçe</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1 id="hero-title">فخامة المخمل التركي الرفيع</h1>
+    <p id="hero-desc">إنتاج وتوريد أرقى أقمشة المخمل للأثاث، الديكور، والأزياء الراقية بمعايير عالمية ولمسة متوارثة.</p>
+    <a href="#contact" class="btn" id="hero-btn">تواصل معنا</a>
+  </section>
+
+  <section class="container">
+    <div class="section-title">
+      <h2 id="products-title">مجموعاتنا المتميزة</h2>
+      <p id="products-subtitle">نسيج فريد يجمع بين النعومة الفائقة والمتانة العالية</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <h3 id="p1-title">مخمل الأثاث والديكور</h3>
+        <p id="p1-desc">مقاوم للتآكل ومصمم ليدوم طويلاً، بألوان فاخرة تمنح المجالس والمنازل رونقاً خاصاً.</p>
+      </div>
+      <div class="card">
+        <h3 id="p2-title">مخمل الأزياء والموضة</h3>
+        <p id="p2-desc">انسيابي، فائق النعومة، ومناسب لأحدث تصاميم الملابس الراقية والعبايات والفساتين.</p>
+      </div>
+      <div class="card">
+        <h3 id="p3-title">إنتاج وتصنيع خاص</h3>
+        <p id="p3-desc">نوفر إمكانية تصنيع ألوان ومواصفات ونقوش خاصة للطلبات والمشاريع الكبيرة بالجملة.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="contact" style="padding-top: 0;">
+    <div class="section-title">
+      <h2 id="contact-title">تواصل مباشر للطلبات والتصدير</h2>
+      <p id="contact-subtitle">نسعد بالإجابة على استفساراتكم وتوفير عينات للأقمشة</p>
+    </div>
+    <div style="text-align: center;">
+      <a href="mailto:info@kalekadife.com" class="btn" id="contact-btn">إرسال استفسار عبر البريد</a>
+    </div>
+  </section>
+
+  <footer>
+    <p id="footer-text">© 2026 Kale Kadife. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script>
+    const translations = {
+      ar: {
+        dir: 'rtl',
+        lang: 'ar',
+        heroTitle: 'فخامة المخمل التركي الرفيع',
+        heroDesc: 'إنتاج وتوريد أرقى أقمشة المخمل للأثاث، الديكور، والأزياء الراقية بمعايير عالمية ولمسة متوارثة.',
+        heroBtn: 'تواصل معنا',
+        productsTitle: 'مجموعاتنا المتميزة',
+        productsSubtitle: 'نسيج فريد يجمع بين النعومة الفائقة والمتانة العالية',
+        p1Title: 'مخمل الأثاث والديكور',
+        p1Desc: 'مقاوم للتآكل ومصمم ليدوم طويلاً، بألوان فاخرة تمنح المجالس والمنازل رونقاً خاصاً.',
+        p2Title: 'مخمل الأزياء والموضة',
+        p2Desc: 'انسيابي، فائق النعومة، ومناسب لأحدث تصاميم الملابس الراقية والعبايات والفساتين.',
+        p3Title: 'إنتاج وتصنيع خاص',
+        p3Desc: 'نوفر إمكانية تصنيع ألوان ومواصفات ونقوش خاصة للطلبات والمشاريع الكبيرة بالجملة.',
+        contactTitle: 'تواصل مباشر للطلبات والتصدير',
+        contactSubtitle: 'نسعد بالإجابة على استفساراتكم وتوفير عينات للأقمشة',
+        contactBtn: 'إرسال استفسار عبر البريد',
+        footerText: '© 2026 Kale Kadife. جميع الحقوق محفوظة.'
+      },
+      tr: {
+        dir: 'ltr',
+        lang: 'tr',
+        heroTitle: 'Kaliteli Kadife Üretiminde Güven',
+        heroDesc: 'Döşemelik, dekorasyon ve hazır giyim için dünya standartlarında yüksek kaliteli kadife kumaş üretimi.',
+        heroBtn: 'Bize Ulaşın',
+        productsTitle: 'Öne Çıkan Koleksiyonlarımız',
+        productsSubtitle: 'Yumuşak doku ve üstün dayanıklılığı buluşturan kumaşlar',
+        p1Title: 'Döşemelik Kadife',
+        p1Desc: 'Aşınmaya dayanıklı, uzun ömürlü ve yaşam alanlarına zarafet katan zengin renk seçenekleri.',
+        p2Title: 'Giyim & Moda Kadifesi',
+        p2Desc: 'Dökümlü, ipeksi yumuşaklıkta ve modern tekstil tasarımlarına uygun özel kumaşlar.',
+        p3Title: 'Özel Üretim',
+        p3Desc: 'Toptan siparişler ve projeleriniz için özel renk, gramaj ve desen üretim imkanı.',
+        contactTitle: 'İhracat ve Toptan Sipariş',
+        contactSubtitle: 'Sorularınız ve numune talepleriniz için bizimle iletişime geçin',
+        contactBtn: 'E-posta ile İletişime Geçin',
+        footerText: '© 2026 Kale Kadife. Tüm hakları saklıdır.'
+      },
+      en: {
+        dir: 'ltr',
+        lang: 'en',
+        heroTitle: 'Premium Velvet Fabric Manufacturing',
+        heroDesc: 'Crafting and supplying top-grade velvet textiles for upholstery, decor, and fashion worldwide.',
+        heroBtn: 'Contact Us',
+        productsTitle: 'Our Signature Collections',
+        productsSubtitle: 'Combining supreme softness with lasting durability',
+        p1Title: 'Upholstery Velvet',
+        p1Desc: 'Durable, abrasion-resistant, and styled in timeless colors for living spaces.',
+        p2Title: 'Apparel & Fashion Velvet',
+        p2Desc: 'Flowing drape and ultra-soft touch suited for luxury fashion and garments.',
+        p3Title: 'Custom Production',
+        p3Desc: 'Tailor-made colors, weights, and finishes for wholesale orders and project specs.',
+        contactTitle: 'Direct Inquiries & Export',
+        contactSubtitle: 'Reach out to our team for questions and fabric sample inquiries',
+        contactBtn: 'Send Email Inquiry',
+        footerText: '© 2026 Kale Kadife. All rights reserved.'
+      }
+    };
+
+    function changeLanguage(lang) {
+      const data = translations[lang];
+      document.documentElement.lang = data.lang;
+      document.documentElement.dir = data.dir;
+
+      document.getElementById('hero-title').innerText = data.heroTitle;
+      document.getElementById('hero-desc').innerText = data.heroDesc;
+      document.getElementById('hero-btn').innerText = data.heroBtn;
+      document.getElementById('products-title').innerText = data.productsTitle;
+      document.getElementById('products-subtitle').innerText = data.productsSubtitle;
+      document.getElementById('p1-title').innerText = data.p1Title;
+      document.getElementById('p1-desc').innerText = data.p1Desc;
+      document.getElementById('p2-title').innerText = data.p2Title;
+      document.getElementById('p2-desc').innerText = data.p2Desc;
+      document.getElementById('p3-title').innerText = data.p3Title;
+      document.getElementById('p3-desc').innerText = data.p3Desc;
+      document.getElementById('contact-title').innerText = data.contactTitle;
+      document.getElementById('contact-subtitle').innerText = data.contactSubtitle;
+      document.getElementById('contact-btn').innerText = data.contactBtn;
+      document.getElementById('footer-text').innerText = data.footerText;
+    }
+  </script>
+</body>
+</html>
