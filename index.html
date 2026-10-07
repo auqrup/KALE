@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="tr" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kale Kadife | قلعة المخمل</title>
+  <title>Kale Kadife Tekstil</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #12372A;
       --accent: #C5A880;
-      --accent-hover: #b09166;
       --bg: #FBFBF9;
       --surface: #FFFFFF;
       --text: #1F2421;
@@ -21,7 +20,7 @@
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Cairo', 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Plus Jakarta Sans', 'Cairo', sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -39,7 +38,7 @@
       align-items: center;
     }
     .logo {
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--primary);
       text-decoration: none;
@@ -56,75 +55,144 @@
     }
     .hero {
       text-align: center;
-      padding: 5rem 1.5rem;
+      padding: 4rem 1.5rem 2.5rem;
       background: radial-gradient(circle at top, #e8edea 0%, var(--bg) 70%);
     }
-    .hero h1 {
-      font-size: 2.5rem;
-      color: var(--primary);
+    .hero svg {
+      width: 52px;
+      height: 52px;
+      stroke: var(--accent);
+      stroke-width: 1.5;
+      fill: none;
       margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: 2.1rem;
+      color: var(--primary);
+      margin-bottom: 0.8rem;
       font-weight: 700;
     }
     .hero p {
-      max-width: 650px;
-      margin: 0 auto 2rem;
-      color: var(--text-muted);
-      font-size: 1.1rem;
-    }
-    .btn {
-      display: inline-block;
-      padding: 0.8rem 1.8rem;
-      background: var(--primary);
-      color: #fff;
-      text-decoration: none;
-      border-radius: var(--radius);
-      font-weight: 600;
-      transition: background 0.2s;
-    }
-    .btn:hover { background: #0c241c; }
-    .container {
-      max-width: 1100px;
+      max-width: 600px;
       margin: 0 auto;
-      padding: 4rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 1.05rem;
     }
-    .section-title {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    .section-title h2 {
-      font-size: 2rem;
-      color: var(--primary);
-      margin-bottom: 0.5rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 1.5rem;
     }
     .card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
       padding: 1.8rem;
+      margin-bottom: 1.5rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.03);
     }
-    .card h3 {
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
       color: var(--primary);
-      margin-bottom: 0.8rem;
-      font-size: 1.25rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.6rem;
     }
-    .card p {
-      color: var(--text-muted);
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .product-box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem;
+      text-align: center;
+      background: #fafaf8;
+    }
+    .product-box svg {
+      width: 32px;
+      height: 32px;
+      stroke: var(--primary);
+      stroke-width: 1.6;
+      fill: none;
+      margin-bottom: 0.6rem;
+    }
+    .product-box h4 {
+      font-size: 1rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+    /* Info List */
+    .info-list {
+      list-style: none;
+      display: grid;
+      gap: 0.8rem;
       font-size: 0.95rem;
     }
+    .info-item {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid #f3f4f6;
+      padding-bottom: 0.5rem;
+    }
+    .info-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .info-val {
+      color: var(--text);
+      font-weight: 500;
+    }
+    .info-val a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    /* WhatsApp Floating Button */
+    .whatsapp-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background-color: #25D366;
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      z-index: 100;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .whatsapp-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+    }
+    .whatsapp-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+    html[dir="rtl"] .whatsapp-btn {
+      right: auto;
+      left: 24px;
+    }
     footer {
-      background: var(--primary);
-      color: #fff;
       text-align: center;
       padding: 2.5rem 1.5rem;
-      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
     }
-    footer p { opacity: 0.8; font-size: 0.9rem; }
   </style>
 </head>
 <body>
@@ -133,112 +201,166 @@
     <a href="#" class="logo">KALE KADİFE</a>
     <div class="lang-switcher">
       <select id="langSelect" onchange="changeLanguage(this.value)">
+        <option value="tr" selected>Türkçe</option>
         <option value="ar">العربية</option>
-        <option value="tr">Türkçe</option>
         <option value="en">English</option>
       </select>
     </div>
   </header>
 
   <section class="hero">
-    <h1 id="hero-title">فخامة المخمل التركي الرفيع</h1>
-    <p id="hero-desc">إنتاج وتوريد أرقى أقمشة المخمل للأثاث، الديكور، والأزياء الراقية بمعايير عالمية ولمسة متوارثة.</p>
-    <a href="#contact" class="btn" id="hero-btn">تواصل معنا</a>
+    <svg viewBox="0 0 24 24">
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+    </svg>
+    <h1>Kale Kadife Tekstil</h1>
+    <p id="hero-desc">Yüksek kaliteli kadife üretimi ve toptan satışı.</p>
   </section>
 
-  <section class="container">
-    <div class="section-title">
-      <h2 id="products-title">مجموعاتنا المتميزة</h2>
-      <p id="products-subtitle">نسيج فريد يجمع بين النعومة الفائقة والمتانة العالية</p>
+  <main class="container">
+    <!-- Products Card -->
+    <div class="card">
+      <div class="card-title">
+        <span id="title-products">Ürünlerimiz</span>
+      </div>
+      <div class="products-grid">
+        <div class="product-box">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 4h16v16H4zM4 9h16M9 4v16"/>
+          </svg>
+          <h4 id="prod-carpet">Kadife Kilim / Halı</h4>
+        </div>
+        <div class="product-box">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 3c-4 3-6 7-6 11a6 6 0 0 0 12 0c0-4-2-8-6-11z"/>
+          </svg>
+          <h4 id="prod-seccade">Seccade</h4>
+        </div>
+        <div class="product-box">
+          <svg viewBox="0 0 24 24">
+            <path d="M4 11V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5M2 17v-4a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v4M5 20v-3M19 20v-3"/>
+          </svg>
+          <h4 id="prod-upholstery">Döşemelik Kadife</h4>
+        </div>
+      </div>
     </div>
-    <div class="grid">
-      <div class="card">
-        <h3 id="p1-title">مخمل الأثاث والديكور</h3>
-        <p id="p1-desc">مقاوم للتآكل ومصمم ليدوم طويلاً، بألوان فاخرة تمنح المجالس والمنازل رونقاً خاصاً.</p>
-      </div>
-      <div class="card">
-        <h3 id="p2-title">مخمل الأزياء والموضة</h3>
-        <p id="p2-desc">انسيابي، فائق النعومة، ومناسب لأحدث تصاميم الملابس الراقية والعبايات والفساتين.</p>
-      </div>
-      <div class="card">
-        <h3 id="p3-title">إنتاج وتصنيع خاص</h3>
-        <p id="p3-desc">نوفر إمكانية تصنيع ألوان ومواصفات ونقوش خاصة للطلبات والمشاريع الكبيرة بالجملة.</p>
-      </div>
-    </div>
-  </section>
 
-  <section class="container" id="contact" style="padding-top: 0;">
-    <div class="section-title">
-      <h2 id="contact-title">تواصل مباشر للطلبات والتصدير</h2>
-      <p id="contact-subtitle">نسعد بالإجابة على استفساراتكم وتوفير عينات للأقمشة</p>
+    <!-- Contact Info Card -->
+    <div class="card">
+      <div class="card-title">
+        <span id="title-contact">İletişim Bilgileri</span>
+      </div>
+      <ul class="info-list">
+        <li class="info-item">
+          <span class="info-label" id="label-address">Adres</span>
+          <span class="info-val">Terazidere Mh. Karaman Sk. No:18/3 Bayrampaşa / İstanbul</span>
+        </li>
+        <li class="info-item">
+          <span class="info-label" id="label-phone">Telefon</span>
+          <span class="info-val"><a href="tel:+902126124569">+90 212 612 45 69</a></span>
+        </li>
+        <li class="info-item">
+          <span class="info-label">WhatsApp</span>
+          <span class="info-val"><a href="https://wa.me/905377793996" target="_blank">+90 537 779 39 96</a></span>
+        </li>
+        <li class="info-item">
+          <span class="info-label" id="label-email">E-posta</span>
+          <span class="info-val"><a href="mailto:info@kaletekstil.com">info@kaletekstil.com</a></span>
+        </li>
+      </ul>
     </div>
-    <div style="text-align: center;">
-      <a href="mailto:info@kalekadife.com" class="btn" id="contact-btn">إرسال استفسار عبر البريد</a>
+
+    <!-- Official Registration Card -->
+    <div class="card">
+      <div class="card-title">
+        <span id="title-legal">Resmi ve Ticari Bilgiler</span>
+      </div>
+      <ul class="info-list">
+        <li class="info-item">
+          <span class="info-label" id="label-unvan">Ticari Unvan</span>
+          <span class="info-val">KALE KADİFE TEKSTİL SAN. VE TİC. LTD. ŞTİ.</span>
+        </li>
+        <li class="info-item">
+          <span class="info-label" id="label-tax">Vergi Dairesi / No</span>
+          <span class="info-val">491 004 2722</span>
+        </li>
+        <li class="info-item">
+          <span class="info-label" id="label-trade">Ticaret Sicil No</span>
+          <span class="info-val">337249-284831</span>
+        </li>
+        <li class="info-item">
+          <span class="info-label" id="label-mersis">MERSİS No</span>
+          <span class="info-val">0491 0042 7220 0012</span>
+        </li>
+      </ul>
     </div>
-  </section>
+  </main>
+
+  <!-- WhatsApp Floating Action -->
+  <a href="https://wa.me/905377793996" target="_blank" rel="noopener noreferrer" class="whatsapp-btn" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.92-9.91-9.92zm5.78 14.12c-.24.68-1.39 1.3-1.92 1.38-.5.08-1.14.12-3.66-.92-2.15-.89-3.53-3.11-3.64-3.25-.11-.15-.87-1.16-.87-2.22 0-1.06.56-1.58.76-1.8.2-.21.43-.27.58-.27.14 0 .29 0 .42.01.14.01.32-.05.5.39.18.44.62 1.51.68 1.62.06.11.09.24.02.39-.08.15-.12.24-.23.37-.12.13-.25.29-.36.39-.12.12-.25.25-.11.49.14.24.62 1.02 1.33 1.65.91.81 1.68 1.06 1.92 1.18.24.12.38.1.52-.06.15-.17.62-.72.78-.97.17-.25.33-.21.56-.12.23.09 1.45.68 1.7.81.25.12.42.18.48.29.06.1.06.63-.18 1.31z"/>
+    </svg>
+  </a>
 
   <footer>
-    <p id="footer-text">© 2026 Kale Kadife. جميع الحقوق محفوظة.</p>
+    <p>© 2026 KALE KADİFE TEKSTİL SAN. VE TİC. LTD. ŞTİ.</p>
   </footer>
 
   <script>
     const translations = {
-      ar: {
-        dir: 'rtl',
-        lang: 'ar',
-        heroTitle: 'فخامة المخمل التركي الرفيع',
-        heroDesc: 'إنتاج وتوريد أرقى أقمشة المخمل للأثاث، الديكور، والأزياء الراقية بمعايير عالمية ولمسة متوارثة.',
-        heroBtn: 'تواصل معنا',
-        productsTitle: 'مجموعاتنا المتميزة',
-        productsSubtitle: 'نسيج فريد يجمع بين النعومة الفائقة والمتانة العالية',
-        p1Title: 'مخمل الأثاث والديكور',
-        p1Desc: 'مقاوم للتآكل ومصمم ليدوم طويلاً، بألوان فاخرة تمنح المجالس والمنازل رونقاً خاصاً.',
-        p2Title: 'مخمل الأزياء والموضة',
-        p2Desc: 'انسيابي، فائق النعومة، ومناسب لأحدث تصاميم الملابس الراقية والعبايات والفساتين.',
-        p3Title: 'إنتاج وتصنيع خاص',
-        p3Desc: 'نوفر إمكانية تصنيع ألوان ومواصفات ونقوش خاصة للطلبات والمشاريع الكبيرة بالجملة.',
-        contactTitle: 'تواصل مباشر للطلبات والتصدير',
-        contactSubtitle: 'نسعد بالإجابة على استفساراتكم وتوفير عينات للأقمشة',
-        contactBtn: 'إرسال استفسار عبر البريد',
-        footerText: '© 2026 Kale Kadife. جميع الحقوق محفوظة.'
-      },
       tr: {
         dir: 'ltr',
         lang: 'tr',
-        heroTitle: 'Kaliteli Kadife Üretiminde Güven',
-        heroDesc: 'Döşemelik, dekorasyon ve hazır giyim için dünya standartlarında yüksek kaliteli kadife kumaş üretimi.',
-        heroBtn: 'Bize Ulaşın',
-        productsTitle: 'Öne Çıkan Koleksiyonlarımız',
-        productsSubtitle: 'Yumuşak doku ve üstün dayanıklılığı buluşturan kumaşlar',
-        p1Title: 'Döşemelik Kadife',
-        p1Desc: 'Aşınmaya dayanıklı, uzun ömürlü ve yaşam alanlarına zarafet katan zengin renk seçenekleri.',
-        p2Title: 'Giyim & Moda Kadifesi',
-        p2Desc: 'Dökümlü, ipeksi yumuşaklıkta ve modern tekstil tasarımlarına uygun özel kumaşlar.',
-        p3Title: 'Özel Üretim',
-        p3Desc: 'Toptan siparişler ve projeleriniz için özel renk, gramaj ve desen üretim imkanı.',
-        contactTitle: 'İhracat ve Toptan Sipariş',
-        contactSubtitle: 'Sorularınız ve numune talepleriniz için bizimle iletişime geçin',
-        contactBtn: 'E-posta ile İletişime Geçin',
-        footerText: '© 2026 Kale Kadife. Tüm hakları saklıdır.'
+        heroDesc: 'Yüksek kaliteli kadife üretimi ve toptan satışı.',
+        titleProducts: 'Ürünlerimiz',
+        prodCarpet: 'Kadife Kilim / Halı',
+        prodSeccade: 'Seccade',
+        prodUpholstery: 'Döşemelik Kadife',
+        titleContact: 'İletişim Bilgileri',
+        labelAddress: 'Adres',
+        labelPhone: 'Telefon',
+        labelEmail: 'E-posta',
+        titleLegal: 'Resmi ve Ticari Bilgiler',
+        labelUnvan: 'Ticari Unvan',
+        labelTax: 'Vergi No',
+        labelTrade: 'Ticaret Sicil No',
+        labelMersis: 'MERSİS No'
+      },
+      ar: {
+        dir: 'rtl',
+        lang: 'ar',
+        heroDesc: 'إنتاج وتوريد أرقى أقمشة المخمل بالجملة.',
+        titleProducts: 'منتجاتنا',
+        prodCarpet: 'بساط مخمل',
+        prodSeccade: 'سجادة الصلاة',
+        prodUpholstery: 'مخمل تنجيد',
+        titleContact: 'معلومات الاتصال',
+        labelAddress: 'العنوان',
+        labelPhone: 'الهاتف',
+        labelEmail: 'البريد الإلكتروني',
+        titleLegal: 'البيانات التجارية والقانونية',
+        labelUnvan: 'الاسم التجاري',
+        labelTax: 'الرقم الضريبي',
+        labelTrade: 'السجل التجاري',
+        labelMersis: 'رقم ميرسيس (Mersis)'
       },
       en: {
         dir: 'ltr',
         lang: 'en',
-        heroTitle: 'Premium Velvet Fabric Manufacturing',
-        heroDesc: 'Crafting and supplying top-grade velvet textiles for upholstery, decor, and fashion worldwide.',
-        heroBtn: 'Contact Us',
-        productsTitle: 'Our Signature Collections',
-        productsSubtitle: 'Combining supreme softness with lasting durability',
-        p1Title: 'Upholstery Velvet',
-        p1Desc: 'Durable, abrasion-resistant, and styled in timeless colors for living spaces.',
-        p2Title: 'Apparel & Fashion Velvet',
-        p2Desc: 'Flowing drape and ultra-soft touch suited for luxury fashion and garments.',
-        p3Title: 'Custom Production',
-        p3Desc: 'Tailor-made colors, weights, and finishes for wholesale orders and project specs.',
-        contactTitle: 'Direct Inquiries & Export',
-        contactSubtitle: 'Reach out to our team for questions and fabric sample inquiries',
-        contactBtn: 'Send Email Inquiry',
-        footerText: '© 2026 Kale Kadife. All rights reserved.'
+        heroDesc: 'High-quality velvet production and wholesale supply.',
+        titleProducts: 'Our Products',
+        prodCarpet: 'Velvet Rugs & Mats',
+        prodSeccade: 'Prayer Rugs',
+        prodUpholstery: 'Upholstery Velvet',
+        titleContact: 'Contact Details',
+        labelAddress: 'Address',
+        labelPhone: 'Phone',
+        labelEmail: 'Email',
+        titleLegal: 'Company Registration',
+        labelUnvan: 'Trade Name',
+        labelTax: 'Tax ID',
+        labelTrade: 'Trade Registry No',
+        labelMersis: 'MERSIS No'
       }
     };
 
@@ -247,21 +369,20 @@
       document.documentElement.lang = data.lang;
       document.documentElement.dir = data.dir;
 
-      document.getElementById('hero-title').innerText = data.heroTitle;
       document.getElementById('hero-desc').innerText = data.heroDesc;
-      document.getElementById('hero-btn').innerText = data.heroBtn;
-      document.getElementById('products-title').innerText = data.productsTitle;
-      document.getElementById('products-subtitle').innerText = data.productsSubtitle;
-      document.getElementById('p1-title').innerText = data.p1Title;
-      document.getElementById('p1-desc').innerText = data.p1Desc;
-      document.getElementById('p2-title').innerText = data.p2Title;
-      document.getElementById('p2-desc').innerText = data.p2Desc;
-      document.getElementById('p3-title').innerText = data.p3Title;
-      document.getElementById('p3-desc').innerText = data.p3Desc;
-      document.getElementById('contact-title').innerText = data.contactTitle;
-      document.getElementById('contact-subtitle').innerText = data.contactSubtitle;
-      document.getElementById('contact-btn').innerText = data.contactBtn;
-      document.getElementById('footer-text').innerText = data.footerText;
+      document.getElementById('title-products').innerText = data.titleProducts;
+      document.getElementById('prod-carpet').innerText = data.prodCarpet;
+      document.getElementById('prod-seccade').innerText = data.prodSeccade;
+      document.getElementById('prod-upholstery').innerText = data.prodUpholstery;
+      document.getElementById('title-contact').innerText = data.titleContact;
+      document.getElementById('label-address').innerText = data.labelAddress;
+      document.getElementById('label-phone').innerText = data.labelPhone;
+      document.getElementById('label-email').innerText = data.labelEmail;
+      document.getElementById('title-legal').innerText = data.titleLegal;
+      document.getElementById('label-unvan').innerText = data.labelUnvan;
+      document.getElementById('label-tax').innerText = data.labelTax;
+      document.getElementById('label-trade').innerText = data.labelTrade;
+      document.getElementById('label-mersis').innerText = data.labelMersis;
     }
   </script>
 </body>
